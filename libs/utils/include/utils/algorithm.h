@@ -178,13 +178,13 @@ inline UTILS_PUBLIC
 RandomAccessIterator partition_point(
         RandomAccessIterator first, RandomAccessIterator last, COMPARE pred,
         bool assume_power_of_two = false) {
-    size_t len = last - first;
+    std::size_t len = last - first;
 
     if (!assume_power_of_two) {
         // handle non power-of-two sized arrays. If it's POT, the next line is a no-op
         // and gets optimized out if the size is known at compile time.
         len = 1u << (31 - clz(uint32_t(len)));     // next power of two length / 2
-        size_t difference = (last - first) - len;
+        std::size_t difference = (last - first) - len;
         first += !difference || pred(first[len]) ? difference : 0;
     }
 

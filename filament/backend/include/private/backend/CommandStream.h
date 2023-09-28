@@ -45,6 +45,7 @@
 #include <assert.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <vector>
 
 // Set to true to print every command out on log.d. This requires RTTI and DEBUG
 #define DEBUG_COMMAND_STREAM false

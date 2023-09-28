@@ -17,6 +17,8 @@
 #ifndef TNT_FILAMENT_BACKEND_VULKANCOMMANDS_H
 #define TNT_FILAMENT_BACKEND_VULKANCOMMANDS_H
 
+#include <atomic>
+
 #include <bluevk/BlueVK.h>
 
 #include "VulkanConstants.h"

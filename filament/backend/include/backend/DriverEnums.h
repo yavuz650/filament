@@ -32,6 +32,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
+#include <string>
 
 /**
  * Types and enums used by filament's driver.

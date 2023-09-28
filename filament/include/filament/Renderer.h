@@ -29,6 +29,7 @@
 #include <math/vec4.h>
 
 #include <stdint.h>
+#include <vector>
 
 namespace filament {
 

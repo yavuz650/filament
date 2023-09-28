@@ -17,7 +17,7 @@ option(FILAMENT_USE_SWIFTSHADER "Compile Filament against SwiftShader" OFF)
 
 option(FILAMENT_ENABLE_LTO "Enable link-time optimizations if supported by the compiler" OFF)
 
-option(FILAMENT_SKIP_SAMPLES "Don't build samples" OFF)
+option(FILAMENT_SKIP_SAMPLES "Don't build samples" ON)
 
 option(FILAMENT_SUPPORTS_XCB "Include XCB support in Linux builds" ON)
 
@@ -297,7 +297,7 @@ if (WIN32)
 endif()
 
 if (LINUX)
-    option(USE_STATIC_LIBCXX "Link against the static runtime libraries." ON)
+    option(USE_STATIC_LIBCXX "Link against the static runtime libraries." OFF)
     if (${USE_STATIC_LIBCXX})
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
         link_libraries("-static-libgcc -static-libstdc++")
